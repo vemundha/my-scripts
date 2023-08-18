@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Title Copier",
+    "version": "1.0",
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "description": "Copy tab title to clipboard",
+    "permissions": ["contextMenus", "tabs", "activeTab", "clipboardWrite"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+    "action": {
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
+}
